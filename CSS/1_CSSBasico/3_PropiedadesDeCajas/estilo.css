@@ -1,0 +1,86 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+}
+
+hr {
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+#caja-uno:hover {
+    outline: 5px solid rgba(213, 187, 187, 0.61);
+}
+
+#caja-uno {
+    background-color: cornflowerblue;
+    display: inline-block;
+    padding: 20px 80px;
+    margin-top: 10px;
+    margin-left: 10px;
+    border-radius: 60px;
+    box-shadow: 10px 15px 10px 0px rgb(36, 37, 63);
+}
+
+
+#caja-dos {
+    background-color:darkred;
+    display: inline-block;
+    padding: 40px;
+    margin-left: 20px;
+    margin-top: 40px;
+    border-style: solid;
+    border-color: darkblue;
+    border-width: 4px;
+    border-radius: 20px;
+    transform: rotate(90deg);
+}
+
+#contenedor {
+    background-color: yellow;
+    height: 400px;
+    width: 400px;
+    border: 2px solid royalblue;
+    position: absolute;
+    top: 270px;
+    left: 190px;
+
+}
+
+#hija-a, #hija-b, #hija-c, #hija-d, #hija-e {
+    background-color: green;
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    height: 100px;
+    width: 100px;
+}
+
+#hija-a {
+    top: 0;    
+}
+
+#hija-b {
+    right: 0;
+}
+
+#hija-c {
+    bottom: 0;
+}
+
+#hija-d {
+    bottom: 0;
+    right: 0;
+}
+
+#hija-e {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}

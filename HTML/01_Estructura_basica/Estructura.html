@@ -1,0 +1,106 @@
+<!-- Etiqueta estándar para HTML 5 -->
+<!DOCTYPE html>
+
+<!-- Etiqueta que engloba toda la página web. -->
+<!-- Con el atributo lang se especifica el lenguaje de la página web -->
+<html lang="es"> 
+
+	<!-- Etiqueta cabecera: metadatos -->
+	<head>
+		<!-- Título de la página web -->
+		<title>Estructura básica HTML 5</title>
+	
+		<!-- Metadato de codificación del documento HTML -->
+		<meta charset= "UTF-8"/> 
+		<!-- Metadato de descripción de la página web -->
+		<meta name="description" content="Estructura básica"/>
+		<!-- Metadato de palabras claves de la página web (en desuso) -->
+		<meta name="keywords" content="HTML5, HTML, CSS, JavaScript"/>
+		
+		<!-- Estilo de la página, primer vistazo a CSS -->
+		<link rel="stylesheet" href="Estilo.css">
+	</head>
+	
+	<!-- Etiqueta del cuerpo de la página web -->
+	<body>
+		<!-- Etiqueta cabecera del sitio web -->
+		<header id="cabeceraPrincipal">
+			<h1>Estructura básica HTML 5</h1>
+		</header>
+
+		<!-- Barra de navegación -->
+		<nav id="navegacionPrincipal">
+			<!-- Lista desordenada (sin numeración) -->
+			<ul>
+				<li>HTML</li>
+				<li>CSS</li>
+				<li>JavaScript</li>
+			</ul>
+		</nav>
+
+		<!-- Barra lateral izquierda -->
+		<aside id="barraLateral">
+			<!-- Una cita -->
+			<blockquote>
+				<!-- Párrafo de texto -->
+				<p id="cita">"Texto aleatorio".</p>
+				<!-- Pie página para poner la referencia del autor -->
+				<footer>Autor X</footer>
+			</blockquote>
+		</aside>
+
+		<!-- Contenido principal -->
+		<main id="contenidoPrincipal">
+			<!-- Noticia 1 -->
+			<section class="noticias">
+				<header>
+					<h2>Noticia 1</h2>
+					<h3>Subtítulo noticia 1</h3>
+				</header>
+				<p>xxxxxxxxxx</p>
+				<p>xxxxxxx</p>
+				<p>xxxxxxxxxxxxxxx</p>
+				<figure>
+					<img id="messi" src="Messi.jpg" alt="Imagen de Lionel Messi">
+					<figcaption>Lionel Andrés Messi Cuccitini</figcaption>
+				</figure>
+				<footer>
+					<p>Autor de la noticia 1</p>
+				</footer>
+			</section>
+
+			<!-- Noticia 2 -->
+			<section class="noticias">
+				<header>
+					<h2>Noticia 2</h2>
+					<h3>Subtítulo noticia 2</h3>
+				</header>
+				<p>xxxxxxxxxx</p>
+				<p>xxxxxxxxxxxxxxxxxxxxxxx</p>
+				<p>xxxxxxx</p>
+				<footer>
+					<p>Autor de la noticia 2</p>
+				</footer>
+			</section>
+
+			<!-- Noticia 3 -->
+			<section class="noticias">
+				<header>
+					<h2>Noticia 3</h2>
+					<h3>Subtítulo noticia 3</h3>
+				</header>
+				<p>xxxxx</p>
+				<p>xxxxxx</p>
+				<p>xxxxxxxxxxxxxxxxx</p>
+				<footer>
+					<p>Autor de la noticia 3</p>
+				</footer>
+			</section>
+		</main>
+	
+		<!-- Pie de página -->
+		<footer id="pieDePaginaPrincipal">
+			<p>Derechos reservados por Akane®</p>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,32 @@
+#cabeceraPrincipal {
+    background-color: beige;
+}
+
+#navegacionPrincipal {
+    background-color: brown;
+}
+
+#barraLateral {
+    background-color: cadetblue;
+}
+
+#contenidoPrincipal {
+    background-color: darkgray;
+}
+
+#pieDePaginaPrincipal {
+    background-color: darkgoldenrod;
+}
+
+.noticias {
+    background-color: darkslategray;
+}
+
+#messi {
+    width: 300px;
+    height: 300px;
+}
+
+#cita {
+    font: 50px sans-serif;
+}

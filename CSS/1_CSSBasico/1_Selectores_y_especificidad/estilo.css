@@ -1,0 +1,58 @@
+/* Selector universal */
+* {
+    color: red;
+    background-color: antiquewhite;
+}
+
+/* Selector de tipo */
+h1 {
+    color: darkblue;
+    background-color: rgb(190, 160, 123);
+}
+
+/* Selector de clase */
+.parrafo-header {
+    color: black;
+    background-color: gray;
+}
+
+/* Selector de ID */
+#parrafo-unico {
+    color: chocolate;
+    background-color: aliceblue;
+}
+
+/* Selector por atributo */
+[placeholder="Escriba algo..."] {
+    color: white;
+    background-color: black;
+}
+
+/* Selector descendiente */
+article p b {
+    color: blueviolet;
+}
+
+/* Pseudoclase con selector descendiente */
+h2 em:hover {
+    color: blue;
+    cursor: grab;
+}
+
+/* Pruebas de especificidad */
+[atributo="pruebaEsp"] {
+    color: grey;
+}
+
+#pruebaEsp {
+    color:brown;
+}
+
+h3 {
+    color: black !important;
+}
+
+.pruebaEsp {
+    color: green;
+}
+

@@ -1,0 +1,87 @@
+* {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.010em;
+}
+
+body {
+    background: #111;
+}
+
+#flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #444;
+    margin: 10% 40px;
+    outline: 2px solid #ddd;
+}
+
+form {
+    flex: 3 0 35vw;
+    padding: 20px;
+    text-align: center;
+    order: 2;
+}
+
+.flex-item__form {
+    display: block;
+    min-width: 30vw;
+    width: 100%;
+    margin: 25px 0;
+    height: 30px;
+    border: none;
+    border-bottom: 3px solid rgb(58, 121, 139);
+    background-color: transparent;
+    color: aliceblue;
+}
+
+.flex-item__form:focus {
+    background: linear-gradient(to bottom, transparent,#666);
+    outline: none;
+}
+
+.email {
+    margin-top: 0;
+}
+
+.textarea {
+    height: 150px;
+    border: 3px solid rgb(58, 121, 139);
+    margin-top: 40px;
+    resize: none;
+}
+
+.button {
+    border: none;
+    width: 100%;
+    padding: 20px;
+    background-color: rgb(43, 95, 110);
+}
+
+.button:hover {
+    background-color: rgb(58, 121, 139);
+}
+
+.button:active {
+    background: linear-gradient(to bottom, rgb(58, 121, 139), rgb(58, 121, 139));
+}
+
+
+#flex-item__img {
+    flex: 1 2;
+    padding: 50px;
+    min-width: 30vw;
+    order: 1;
+}
+
+.flex-item__img__img {
+    text-align: center;
+    padding: 15px;
+    border-radius: 50%;
+    background-color: #ddd;
+}
+
+img {
+    width: 70%;
+}

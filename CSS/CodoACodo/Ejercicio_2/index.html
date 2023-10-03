@@ -1,0 +1,77 @@
+<!-- 
+    Según el boceto, identificar las etiquetas posibles y darles estilos. 
+-->
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://kit.fontawesome.com/9a4981c5cc.js" crossorigin="anonymous"></script>
+        <title>Ejercicio 5</title>
+    </head>
+    <body>
+        <div class="grid-container">
+            <header> <!-- Inicio Header -->
+                <nav class="flex-container">
+                    <picture>
+                        <img src="https://picsum.photos/100/50">
+                    </picture>
+                    <p class="red">CE MANAGEMENT</p>
+                </nav>
+            </header> <!-- Fin Header-->
+
+            <main class="flex-container column"> <!-- Inicio Main -->
+                <section class="flex-container column">
+                    <h1>
+                        <span>6th Annual</span>
+                        <span>CE Management</span>
+                        <span>Conference</span>
+                    </h1>
+                    <p>
+                        The conference features keynotes with Q&A's, which are followed
+                        by workshops to put your knowledge to practical use.
+                    </p>
+                    <p class="red">Guest speaker: Tyler Martin, founder of ManagePro</p>
+                </section>
+
+                <section class="flex-container">
+                    <div id="izquierda" class="flex-container">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <div class="flex-container column">
+                            <p>29 AUGUST</p>
+                            <p>6:00 PM</p>
+                        </div>
+                    </div>
+                    <div id="derecha" class="flex-container">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div class="flex-container column">
+                            <p>MAIN STREET 234</p>
+                            <p>NEW YORK</p>
+                        </div>
+                    </div>
+                </section>
+
+            </main> <!-- Fin Main -->
+
+            <aside class="flex-container column"> <!-- Inicio Aside -->
+                <section class="flex-container">
+                    <h2>Book a spot<br>while you can</h2>
+                </section>
+                <section id="formulario">
+                    <form class="flex-container column">
+                        <input type="text" id="name" name="Name" placeholder="Your Name"/>
+                        <input type="email" id="email" name="Email" placeholder="Your E-mail"/>
+                        <input type="tel" id="phone" name="Phone" placeholder="Your Phone"/>
+                        <input type="text" id="company" name="Company" placeholder="Your Company"/>
+                        <label>
+                            <input type="checkbox" id="information" name="Information" value="Agree"/>
+                            I agree to receive commercial information from [Company Name] [*read more]
+                        </label>
+                        <button type="submit">REGISTER NOW!</button>
+                    </form>
+                </section>
+            </aside> <!-- Fin Aside -->
+        </div>
+    </body>
+</html>

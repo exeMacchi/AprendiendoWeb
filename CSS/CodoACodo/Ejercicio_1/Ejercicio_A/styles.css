@@ -1,0 +1,18 @@
+body {
+    background: linear-gradient(to right, #84addb, #dfc56f);
+}
+
+h1 {
+    color: #1f6b97;
+    text-shadow: 5px 5px 20px rgb(45, 60, 133);
+}
+
+h2 {
+    color: #856a11;
+    text-shadow: 5px 5px 20px rgb(96, 104, 32);
+}
+
+ul > li {
+    font-family: sans-serif;
+    font-size: 20px;
+}

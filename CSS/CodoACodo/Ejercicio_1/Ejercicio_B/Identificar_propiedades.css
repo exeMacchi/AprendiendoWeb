@@ -1,0 +1,41 @@
+/* Identificar las siguientes propiedades en CSS */
+
+* {
+    /* 1. Agregar color de fondo */
+    background-color: #fff;
+
+    /* 2. Cambiar el interlineado */
+    line-height: 10px;
+
+    /* 3. Alinear el texto */
+    text-align: center;
+
+    /* 4. Todas las opciones de background */
+    background: 'background-color' 'background-image' 'background-repeat'
+                'background-attachment' 'background-position';
+
+    /* 5. Cambiar el grosor de la letra (negrita o normal) */
+    font-weight: bold;
+
+    /* 6. Cambiar las opciones de una lista (desordenada u ordenada) */
+    list-style: 'list-style-type' 'list-style-position' 'list-style-image';
+
+    /* 7. Sombrear la tipografía */
+    text-shadow: 5 5 1 #fff;
+
+    /* 8. Espaciado de letras */
+    letter-spacing: 5;
+
+    /* 9. Espaciado de palabras */
+    word-spacing: 5;
+
+    /* 10. Manjeo de subrayado del texto */
+    text-decoration: underline;
+
+    /* 11. Manejo del exceso de texto */
+    overflow: hidden;
+    white-space: normal;
+
+    /* 12. Identación de un bloque de texto */
+    text-indent: 5px;
+}

@@ -1,0 +1,80 @@
+<!-- 
+	Recrear un formulario y aplicar Formspree
+-->
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Clase 3 - Formularios</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=divice-width initial-scale=1.0"/>
+        <style>
+            .etiqueta-unica {
+                display: block;
+                margin-top: 10px;
+            }
+            
+            div {
+                margin-top: 10px;
+            }
+
+            textarea {
+                resize: none;
+            }
+
+            button {
+                display: block;
+                margin-top: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Formspree -->
+        <form action="https://formspree.io/f/mjvqyjob" method="post">
+            <label class="etiqueta-unica" for="nombre-apellido">
+                Nombre y apellido:
+                <input type="text" name="nombre-apellido" id="nombre-apellido" placeholder="Ej: José/María" required>
+            </label>
+
+            <label class="etiqueta-unica" for="edad">
+                Edad:
+                <input type="text" name="edad" id="edad">
+            </label>
+
+            <label class="etiqueta-unica" for="email">
+                E-mail:
+                <input type="email" name="email" id="email" required>
+            </label>
+
+            <label class="etiqueta-unica" for="motivo-consulta">
+                Motivo de consulta:
+                <select name="motivo-consulta" id="motivo-consulta" required>
+                    <option value="sugerencia" selected>Sugerencia</option>
+                    <option value="reclamo">Reclamo</option>
+                </select>
+            </label>
+
+            <div>
+                ¿Estás cursando?
+                <label for="cursada-si">
+                    <input type="radio" id="cursada-si" name="cursada">
+                    Sí
+                </label>
+                <label for="cursada-no">
+                    <input type="radio" id="cursada-no" name="cursada">
+                    No
+                </label>
+            </div>
+
+            <label class="etiqueta-unica" for="material-dicactico">
+                ¿Querés recibir material didáctico?
+                <input type="checkbox" id="material-dicactico" name="material-dicactico" value="material-dicactico-si">
+                Sí
+            </label>
+
+            <label class="etiqueta-unica" for="comentarios">Comentarios</label>
+            <textarea name="comentarios" id="comentarios" rows="8" cols="40" placeholder="Quisiera indicar que..."></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </body>
+</html>

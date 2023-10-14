@@ -106,7 +106,12 @@ const peliculas = [
     }
 ]
 
-// Función de filtrado
+/**
+ * Filtrar un array de objetos de películas según una calificación como condición.
+ * @param {Array} movies Array de objetos
+ * @param {Number} calification Calificación
+ * @returns {Array} Array filtrado
+ */
 function filterMovies(movies, calification) {
     const filteredMovies = [];
     for (let i = 0; i < movies.length; i++) {
@@ -117,7 +122,13 @@ function filterMovies(movies, calification) {
     return filteredMovies;
 }
 
-// Promesa
+/**
+ * Promesa que retorna como respuesta las películas filtradas según una calificación
+ * como condición
+ * @param {Array} movies Array de películas
+ * @param {Number} calification Calificación
+ * @returns {Promise} Promesa
+ */
 function returnFilteredMovies(movies, calification) {
     return new Promise((res, rej) => {
         setTimeout(() => {
@@ -132,7 +143,13 @@ function returnFilteredMovies(movies, calification) {
     });
 }
 
-// Función asincrónica
+/**
+ * Función asincrónica que retorna un array de películas filtradas según una
+ * calificación como condición.
+ * @param {Array} movies Array de películas
+ * @param {Number} calification Calificación
+ * @returns {Array} Array con las películas filtradas
+ */
 async function findMovies(movies, calification) {
     try {
         const filteredMovies = await returnFilteredMovies(movies, calification);
@@ -143,12 +160,60 @@ async function findMovies(movies, calification) {
     }
 }
 
+/**
+ * Crear los /<div> que contengan la información de las películas filtradas.
+ * @param {Array} filteredMovies Array de películas
+ * @returns {DocumentFragment} DocumentFragment
+ */
+function createFragment(filteredMovies) {
+    const fragment = document.createDocumentFragment();
+    for (let i = 0; i < filteredMovies.length; i++) {
+        const title = document.createElement("h2");
+        title.textContent = filteredMovies[i].titulo;
 
-// Resultados
-console.log("A");
+        const director = document.createElement("h3");
+        director.textContent = filteredMovies[i].director;
+
+        const genre = document.createElement("p");
+        genre.textContent = `• Género: ${filteredMovies[i].genero}`;
+
+        const year = document.createElement("p");
+        year.textContent = `• Año de estreno: ${filteredMovies[i].anio}`;
+
+        const duration = document.createElement("p");
+        duration.textContent = `• Duración: ${filteredMovies[i].duracionEnMinutos} minutos`;
+
+        const oscar = document.createElement("p");
+        oscar.textContent = filteredMovies[i].ganoOscar ?
+                            "• Ganó el Óscar" : 
+                            "• No ganó el oscar";
+
+        const calification = document.createElement("p");
+        calification.textContent = `• Calificación IMDB: ${filteredMovies[i].calificacionIMDB}`;
+
+        const div = document.createElement("div");
+        div.classList.add("movie-container");
+        div.append(title);
+        div.append(director);
+        div.append(genre);
+        div.append(year);
+        div.append(duration);
+        div.append(oscar);
+
+        fragment.append(div);
+    }
+    return fragment;
+}
+
 
 findMovies(peliculas, 7)
-    .then(filteredMovies => console.log(filteredMovies))
+    .then(filteredMovies => {
+        const fragment = document.createDocumentFragment();
+        const h1 = document.createElement("h1");
+        h1.textContent = "Películas con calificación superior a 7";
+        fragment.append(h1);
+        fragment.append(createFragment(filteredMovies));
+        document.body.append(fragment);
+    })
     .catch(err => console.error(err.message));
 
-console.log("B");

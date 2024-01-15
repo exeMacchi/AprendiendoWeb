@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <%- include("./partials/head") %>
+    </head>
+    <body>
+        <header>
+            <%- include("./partials/navbar") %>
+        </header>
+        <h1 class="text-center">Crear un nuevo usuario</h1>
+        <% if (error) { %>
+            <div class="container">
+                <ul class="alert alert-danger">
+                    <% errors.forEach(error => { %>
+                        <li class="p-2">
+                            <%= error.msg %>
+                        </li>
+                    <% }); %>
+                </ul>
+            </div>
+        <% } %>
+        <form action="/admin/create"
+              method="post"
+              class="bg-light rounded p-2 mx-5"
+              enctype="multipart/form-data">
+
+              <!-- Nombre -->
+              <div class="form-group">
+                    <label for="nombreUsuario" 
+                           class="form-label">Nombre:</label>
+                    <input id="nombreUsuario" 
+                           class="form-control"
+                           name="nombre"
+                           type="text"
+                           placeholder="Introduzca el nombre...">
+              </div>
+              <hr>
+
+              <!-- Edad -->
+              <div class="form-group">
+                <label for="edadUsuario" 
+                       class="form-label">Edad:</label>
+                <input id="edadUsuario" 
+                       class="form-control"
+                       name="edad"
+                       type="number"
+                       placeholder="Introduzca la edad..."
+                       required>
+              </div>
+              <hr>
+
+              <!-- Email -->
+              <div class="form-group">
+                     <label for="emailUsuario" 
+                            class="form-label">Email:</label>
+                     <input id="emailUsuario" 
+                            class="form-control"
+                            name="email"
+                            type="email"
+                            placeholder="Introduzca el correo electrónico..."
+                            required>
+              </div>
+              <hr>
+
+              <!-- Telefono -->
+              <div class="form-group">
+                     <label for="telefonoUsuario" 
+                            class="form-label">Teléfono:</label>
+                     <input id="telefonoUsuario" 
+                            class="form-control"
+                            name="telefono"
+                            type="tel"
+                            placeholder="Introduzca el teléfono..."
+                            required>
+              </div>
+              <hr>
+
+              <!-- Ciudad -->
+              <div class="form-group">
+                     <label for="ciudadUsuario" 
+                            class="form-label">Ciudad:</label>
+                     <input id="ciudadUsuario" 
+                            class="form-control"
+                            name="ciudad"
+                            type="text"
+                            placeholder="Introduzca la ciudad..."
+                            required>
+              </div>
+
+              <!-- Imagen -->
+              <div class="form-group mt-3 d-flex justify-content-between align-items-center gap-5">
+                     <div class="col-6">
+                            <label for="imagenUsuario"
+                                   class="form-label">Imagen:</label>
+                            <input id="imagenUsuario"
+                                   class="form-control"
+                                   type="file"
+                                   name="imagen"
+                                   accept=".png, .jpg, .jpeg"
+                                   required>
+                     </div>
+                     <div class="col-6">
+                            <figure style="width: 100px;">
+                                   <img id="imagenSeleccionada" 
+                                        src="/avatar/placeholder.png" 
+                                        alt=""
+                                        style="width: 100%;">
+                            </figure>
+                     </div>
+              </div>
+
+            <button type="submit"
+                    class="btn btn-primary mt-3">
+                    Crear usuario
+            </button>
+        </form>
+        <%- include("./partials/bootstrap") %>
+        <script type="module">
+              import changeImage from "/js/inputFile.mjs";
+              window.onload = () => {
+                     changeImage();
+              }
+        </script>
+    </body>
+</html>

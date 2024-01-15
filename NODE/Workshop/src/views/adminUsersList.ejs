@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <%- include("./partials/head") %>
+    </head>
+    <body>
+        <header>
+            <%- include("./partials/navbar") %>
+        </header>
+
+        <main class="container">
+            <div class="row my-2">
+                <div class="col-6 d-flex justify-content-start align-items-center">
+                    <h1>Lista de usuarios - Admin</h1>
+                </div>
+                <div class="col-6 d-flex justify-content-end align-items-center">
+                    <a href="/admin/create" 
+                    class="btn btn-warning">Crear nuevo usuario</a>
+                </div>
+            </div>
+
+            <div class="row">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Nombre</th>
+                            <th>Edad</th>
+                            <th>Email</th>
+                            <th>Ciudad</th>
+                            <th>Telefono</th>
+                            <th>Imagen</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <% users.forEach(user => { %>
+                            <tr>
+                                <td><%= user.id %></td>
+                                <td><%= user.name %></td>
+                                <td><%= user.age %></td>
+                                <td><%= user.email %></td>
+                                <td><%= user.location %></td>
+                                <td><%= user.phone %></td>
+                                <td>
+                                    <img src="<%= user.image %>" alt="" style="width: 50px;">
+                                </td>
+                                <td>
+                                    <a href="/admin/edit/<%= user.id %>">Editar</a>
+                                    <a href="/admin/delete/<%= user.id %>">Borrar</a>
+                                </td>
+                            </tr>
+                        <% }); %>
+                    </tbody>
+                </table>
+            </div>
+
+        </main>
+        
+        <%- include("./partials/bootstrap") %>
+    </body>
+</html>
